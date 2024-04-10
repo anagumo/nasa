@@ -4,11 +4,11 @@ jobs: # A basic unit of work in a run
   build: # Runs not usign workflows must have a build as entry point
     macos: # Indicate that we are using the macOS executor 
     xcode: 15.0.0
-    steps:
-      - checkout # Pull down code for your version control system 
+    steps: # A series of command to run
+      - checkout # pull down code from your version control system. 
       - run: # Run our tests usign xcode's cli tool 'xcodebuild'
-        name: # Run Unit Test
-        command: xcodebuild test -workspace Nasa.xcworkspace - scheme Nasa -destination 'platform=iOS Simulator,name=iPhone 14, iOS=17'
-      -run: # Build our application
-        name: Build Application
-        command: xcodebuild -workspace Nase.xcworkspace -scheme Nasa
+          name: # Run Unit Test
+          command: xcodebuild test -workspace Nasa.xcworkspace - scheme Nasa -destination 'platform=iOS Simulator,name=iPhone 14, iOS=17'
+      - run: # Build our application
+          name: Build Application
+          command: xcodebuild -workspace Nase.xcworkspace -scheme Nasa
