@@ -1,11 +1,4 @@
-//
-//  ContentView.swift
-//  Nasa
-//
-//  Created by Ariana Santillán on 10/04/24.
-//
-
-import SwiftUI
+ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
