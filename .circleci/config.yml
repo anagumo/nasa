@@ -8,7 +8,7 @@ jobs: # A basic unit of work in a run
       - checkout # pull down code from your version control system. 
       - run: # Run our tests usign xcode's cli tool 'xcodebuild'
           name: # Run Unit Test
-          command: xcodebuild test -workspace Nasa.xcworkspace - scheme Nasa -destination 'platform=iOS Simulator,name=iPhone 14, iOS=16.2'
+          command: xcodebuild test -workspace Nasa.xcworkspace - scheme Nasa -destination "platform=iOS Simulator,name=iPhone 14,iOS=16.2"
       - run: # Build our application
           name: Build Application
           command: xcodebuild -workspace Nase.xcworkspace -scheme Nasa
